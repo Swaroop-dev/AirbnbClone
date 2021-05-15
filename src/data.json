@@ -1,20 +1,24 @@
 [
   {
+    
     "name": "Suresh",
     "city": "Bangalore",
     "marks": "85"
   },
   {
+    
     "name": "Sukhesh",
     "city": "Mysore",
     "marks": "75"
   },
   {
+   
     "name": "Suman",
     "city": "Chickballapur",
     "marks": "75"
   },
   {
+    
     "name": "Sowmesh",
     "city": "Chickmangalur",
     "marks": "75"

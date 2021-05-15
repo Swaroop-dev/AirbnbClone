@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Component1 from "./Component1";
+const data1 = require("./data.json");
 
 function App() {
+  const [data, setdata] = useState([]);
+
+  useEffect(() => {
+    setdata(data1);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        {data.map((d, index) => (
+          <Component1 name={d.name} city={d.city} marks={d.marks} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
